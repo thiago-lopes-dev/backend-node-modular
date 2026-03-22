@@ -1,3 +1,15 @@
+
+---
+
+###**Badges**
+Você pode adicionar **badges no topo do README** para deixar bonito e profissional:
+
+```markdown
+![Node.js](https://img.shields.io/badge/Node.js-18+-green)
+![Express](https://img.shields.io/badge/Express-4.x-blue)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # 🚀 API Sistema
 
 API backend com autenticação JWT, gerenciamento de usuários, segurança avançada, logs detalhados e controle de acesso.
@@ -94,3 +106,54 @@ Resumindo “quem faz o quê” na API
 | Health check          | `/health`                               | Verifica status da API                      |
 | Tratamento de erros   | errorMiddleware + Node global           | Captura erros e evita crash                 |
 | Banco de dados        | Conexão + migrations                    | Testa conexão, atualiza tabelas             |
+
+
+## 🛠️ Tecnologias e pré-requisitos
+
+- Node.js 18+
+- Express
+- PostgreSQL
+- JWT (JSON Web Token)
+- Helmet, CORS, Compression
+- Git
+
+## ⚡ Instalação e execução
+
+ Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/seu-repo.git
+
+
+---
+
+### **Estrutura de pastas**
+Exibir a árvore do projeto, já com explicação de cada arquivo/pasta:
+
+```markdown
+## 📂 Estrutura do projeto
+
+📁 projeto-sistema
+├── 📁 src
+│   ├── 📄 app.js        # Cérebro da aplicação, middlewares e rotas
+│   ├── 📄 server.js     # Inicializa servidor, conecta banco, executa migrations
+│   └── 📁 routes
+│       ├── 📄 auth.js   # Rotas de autenticação
+│       └── 📄 usuarios.js # Rotas de usuários
+├── 📁 config
+│   └── 📄 env.js        # Configurações do ambiente (.env)
+├── 📁 database
+│   ├── 📄 connection.js # Conexão com banco
+│   └── 📄 migration.js  # Criação/atualização de tabelas
+├── 📄 package.json      # Dependências e scripts
+└── 📄 README.md         # Documentação
+
+## 💡 Exemplos de uso
+
+1. Login:
+```bash
+POST /auth/login
+Body: { "email": "usuario@teste.com", "password": "123456" }
+
+POST /usuarios
+Header: Authorization: Bearer <token>
+Body: { "nome": "João", "email": "joao@teste.com" }
