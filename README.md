@@ -100,19 +100,6 @@ API backend com autenticação JWT, gerenciamento de usuários, segurança avan�
 
 ---
 
-## Postman
-
-//wjsiwjiw
-{
-  "email": "usuario@teste.com",
-  "password": "123456"
-}
-
-smwmsow
-
----
-
-
 ## ⚡ Instalação e execução
 
 1. Clone o repositório:
