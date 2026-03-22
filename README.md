@@ -1,46 +1,84 @@
-💻 Funcionalidades principais da API
-Login e autenticação
-Rotas de /auth para login, logout e registro de usuários.
-Utiliza JWT (token) para validar usuários logados.
-Tokens expiram em 1 hora (JWT_EXPIRES_IN=1h).
-Gerenciamento de usuários
-Rotas /usuarios para criar, listar, atualizar e deletar usuários.
-Possibilidade de limitar acesso mediante autenticação.
-Saúde da API
-Rota /health retorna status da API (OK), ambiente (development ou production) e timestamp.
-Serve para monitorar se o servidor está funcionando.
-Aceitar dados
-Recebe JSON e dados de formulários HTML.
-Limite de tamanho do envio: 10MB.
+# 🚀 API Sistema
 
-🛡️ Segurança e proteção
-Proteções HTTP básicas
-Helmet → impede ataques comuns via cabeçalhos HTTP.
-Controle de acesso (CORS)
-Produção: apenas sites autorizados podem acessar a API.
-Desenvolvimento: acesso liberado para testes.
-Rate limit
-Limita quantas requisições um usuário pode fazer em determinado tempo → evita abuso e ataques.
-Filtro de IP
-Permite ou bloqueia usuários com base no IP.
-Filtro por geolocalização
-Permite ou bloqueia usuários dependendo do país.
-Logs
-Todas as requisições podem ser registradas.
-Persistência opcional → salvar logs no banco ou arquivo.
-Tratamento de erros
-Captura erros da aplicação e erros críticos do Node.js (Promises rejeitadas e exceções não tratadas).
+API backend com autenticação JWT, gerenciamento de usuários, segurança avançada, logs detalhados e controle de acesso.
 
-🚀 Operações do servidor
-Inicialização
-Conecta ao banco de dados e testa se está vivo.
-Executa migrations → cria/atualiza tabelas automaticamente.
-Execução
-Cria servidor HTTP que escuta requisições.
-Se a porta estiver ocupada, tenta outra automaticamente.
-Desligamento seguro (graceful shutdown)
-Fecha servidor e conexões com banco de forma organizada.
-Se travar, força encerramento após 10 segundos.
+---
+
+## 💻 Funcionalidades principais da API
+
+1. **Login e autenticação**
+   
+   - Rotas de `/auth` para login, logout e registro de usuários.
+   - Utiliza **JWT (token)** para validar usuários logados.
+   - Tokens expiram em 1 hora (`JWT_EXPIRES_IN=1h`).
+
+2. **Gerenciamento de usuários**
+   
+   - Rotas `/usuarios` para criar, listar, atualizar e deletar usuários.
+   - Possibilidade de limitar acesso mediante autenticação.
+
+3. **Saúde da API**
+   
+   - Rota `/health` retorna status da API (`OK`), ambiente (`development` ou `production`) e timestamp.
+   - Serve para monitorar se o servidor está funcionando.
+
+4. **Aceitar dados**
+   
+   - Recebe **JSON** e dados de **formulários HTML**.
+   - Limite de tamanho do envio: 10MB.
+
+---
+
+## 🛡️ Segurança e proteção
+
+1. **Proteções HTTP básicas**
+   
+   - Helmet → impede ataques comuns via cabeçalhos HTTP.
+
+2. **Controle de acesso (CORS)**
+   
+   - Produção: apenas sites autorizados podem acessar a API.
+   - Desenvolvimento: acesso liberado para testes.
+
+3. **Rate limit**
+   
+   - Limita quantas requisições um usuário pode fazer em determinado tempo → evita abuso e ataques.
+
+4. **Filtro de IP**
+   
+   - Permite ou bloqueia usuários com base no IP.
+
+5. **Filtro por geolocalização**
+   
+   - Permite ou bloqueia usuários dependendo do país.
+
+6. **Logs**
+   
+   - Todas as requisições podem ser registradas.
+   - Persistência opcional → salvar logs no banco ou arquivo.
+
+7. **Tratamento de erros**
+   
+   - Captura erros da aplicação e erros críticos do Node.js (Promises rejeitadas e exceções não tratadas).
+
+---
+
+## 🚀 Operações do servidor
+
+1. **Inicialização**
+   
+   - Conecta ao banco de dados e testa se está vivo.
+   - Executa migrations → cria/atualiza tabelas automaticamente.
+
+2. **Execução**
+   
+   - Cria servidor HTTP que escuta requisições.
+   - Se a porta estiver ocupada, tenta outra automaticamente.
+
+3. **Desligamento seguro (graceful shutdown)**
+   
+   - Fecha servidor e conexões com banco de forma organizada.
+   - Se travar, força encerramento após 10 segundos.
 
 Resumindo “quem faz o quê” na API
 | Funcionalidade        | Como funciona                           | Observações                                 |
