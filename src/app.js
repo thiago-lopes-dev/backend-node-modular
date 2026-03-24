@@ -7,7 +7,7 @@ const morgan = require("morgan");
 const rateLimitMiddleware = require("./middlewares/ratelimit.middleware");
 const ipFilterMiddleware = require("./middlewares/ipFilter.middleware");
 const geoLocationMiddleware = require("./middlewares/geoLocation.middleware");
-const loggerMiddleware = require("./middlewares/logger.middleware");
+const loggerMiddleware = require("./middlewares/Logger.middleware");
 const persistenciaMiddleware = require("./middlewares/persistencia.middleware");
 const errorMiddleware = require("./middlewares/error.middleware");
 
