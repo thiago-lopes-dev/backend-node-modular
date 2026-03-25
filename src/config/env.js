@@ -15,7 +15,7 @@ module.exports = {
     PORT: getEnv("PORT", 8081),
 
     DB_HOST: getEnv("DB_HOST", "localhost"),
-    DB_PORT: getEnv("DB_PORT", "0000"),
+    DB_PORT: getEnv("DB_PORT", "5432"), 
     DB_USER: getEnv("DB_USER", "postgres"),
     DB_PASSWORD: getEnv("DB_PASSWORD", "***"),
     DB_NAME: getEnv("DB_NAME", "sistema"),

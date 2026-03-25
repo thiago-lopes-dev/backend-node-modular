@@ -7,7 +7,7 @@ const morgan = require("morgan");
 const rateLimitMiddleware = require("./middlewares/ratelimit.middleware");
 const ipFilterMiddleware = require("./middlewares/ipFilter.middleware");
 const geoLocationMiddleware = require("./middlewares/geoLocation.middleware");
-const loggerMiddleware = require("./middlewares/Logger.middleware");
+const loggerMiddleware = require("./middlewares/logger.middleware");
 const persistenciaMiddleware = require("./middlewares/persistencia.middleware");
 const errorMiddleware = require("./middlewares/error.middleware");
 
@@ -118,3 +118,4 @@ process.on("uncaughtException", (err) => {
 });
 
 module.exports = app;
+>>>>>>> 9a621af (minhas alterações)
