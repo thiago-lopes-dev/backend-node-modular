@@ -29,5 +29,3 @@ module.exports = {
         ? process.env.ALLOWED_ORIGINS.split(",")
         : []
 };
-
-//
