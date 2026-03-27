@@ -81,22 +81,61 @@ API backend com autenticação JWT, gerenciamento de usuários, segurança avan�
    - Se travar, força encerramento após 10 segundos.
 ---
 
-## 📂 Estrutura do projeto
+## 📁 Estrutura do Projeto
 
-📁 projeto-sistema  
-├── 📁 src  
-│   ├── 📄 app.js        # Cérebro da aplicação, middlewares e rotas  
-│   ├── 📄 server.js     # Inicializa servidor, conecta banco, executa migrations  
-│   └── 📁 routes  
-│       ├── 📄 auth.js   # Rotas de autenticação  
-│       └── 📄 usuarios.js # Rotas de usuários  
-├── 📁 config  
-│   └── 📄 env.js        # Configurações do ambiente (.env)  
-├── 📁 database  
-│   ├── 📄 connection.js # Conexão com banco  
-│   └── 📄 migration.js  # Criação/atualização de tabelas  
-├── 📄 package.json      # Dependências e scripts  
-└── 📄 README.md         # Documentação
+```
+/backend/
+│
+├── package.json
+├── package-lock.json
+├── .env
+├── node_modules/
+│
+└── src/
+    ├── app.js
+    ├── server.js
+    │
+    ├── config/
+    │   ├── env.js
+    │   ├── jwt.js
+    │   ├── security.js
+    │   └── rateLimit.js
+    │
+    ├── database/
+    │   ├── connection.js
+    │   ├── migration.js
+    │   └── seed.js
+    │
+    ├── error/
+    │   ├── AppError.js
+    │   ├── UnauthorizedError.js
+    │   ├── ForbiddenError.js
+    │   └── ValidationError.js
+    │
+    ├── middlewares/
+    │   ├── auth.middleware.js
+    │   ├── role.middleware.js
+    │   ├── validation.middleware.js
+    │   ├── rateLimit.middleware.js
+    │   ├── error.middleware.js
+    │   ├── geoLocation.middleware.js
+    │   ├── ipFilter.middleware.js
+    │   ├── logger.middleware.js
+    │   └── persistencia.middleware.js
+    │
+    └── modules/
+        ├── auth/
+        │   ├── auth.routes.js
+        │   ├── auth.controller.js
+        │   ├── auth.service.js
+        │   └── auth.repository.js
+        │
+        └── usuario/
+            ├── usuario.routes.js
+            ├── usuario.controller.js
+            ├── usuario.service.js
+            └── usuario.repository.js
+```
 
 ---
 
