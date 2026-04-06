@@ -14,11 +14,11 @@ module.exports = {
     NODE_ENV: getEnv("NODE_ENV", "development"),
     PORT: getEnv("PORT", 8081),
 
-    DB_HOST: getEnv("DB_HOST", "localhost"),
-    DB_PORT: getEnv("DB_PORT", "5432"), 
-    DB_USER: getEnv("DB_USER", "postgres"),
+    DB_HOST: getEnv("DB_HOST", "*****"),
+    DB_PORT: getEnv("DB_PORT", "****"), 
+    DB_USER: getEnv("DB_USER", "*****"),
     DB_PASSWORD: getEnv("DB_PASSWORD", "***"),
-    DB_NAME: getEnv("DB_NAME", "sistema"),
+    DB_NAME: getEnv("DB_NAME", "****"),
 
     JWT_SECRET: getEnv("JWT_SECRET", "super_secret_key"),
     JWT_EXPIRES_IN: getEnv("JWT_EXPIRES_IN", "1h"),
